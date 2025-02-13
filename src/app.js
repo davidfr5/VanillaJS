@@ -1,11 +1,18 @@
-/* eslint-disable */
-import "bootstrap";
-import "./style.css";
+function generateExcuse() {
+  let who = ["El perro", "Mi madre", "El cartero", "Mi pájaro"];
+  let action = ["se comió", "orinó sobre", "aplastó", "rompió"];
+  let what = ["mis deberes ", "mi ps5", "el coche"];
+  let when = [
+    "antes de clase",
+    "en la siesta ",
+    "mientras estaba en el futnol",
+    "en la comida",
+  ];
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
+  let excuse = `${who[Math.floor(Math.random() * who.length)]} 
+                ${action[Math.floor(Math.random() * action.length)]} 
+                ${what[Math.floor(Math.random() * what.length)]} 
+                ${when[Math.floor(Math.random() * when.length)]}`;
 
-window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
-};
+  document.getElementById("excuse").innerHTML = excuse;
+}
